@@ -1,0 +1,51 @@
+:root { --hijau: #2a3a33; --zaitun: #5c6e46; --kertas: #f2f0ea; --kartu: #fbfaf6; --garis: #ddd8c9; --teks: #26312b; --redup: #55645a; --kuningan: #8b6f3d; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--teks); background: var(--kertas); line-height: 1.6; }
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; color: var(--hijau); line-height: 1.25; }
+h2 { font-size: 1.5rem; margin: 0 0 1rem; }
+h3 { font-size: 1.05rem; margin: 0 0 .4rem; }
+a { color: var(--zaitun); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--kuningan); outline-offset: 2px; }
+.wadah { max-width: 900px; margin: 0 auto; padding: 0 1.25rem; }
+.header { position: sticky; top: 0; z-index: 10; background: var(--hijau); color: var(--kertas); }
+.header-isi { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .4rem 2rem; padding-top: .8rem; padding-bottom: .8rem; }
+.brand { margin: 0; font-family: Georgia, serif; font-weight: 600; font-size: 1.1rem; }
+.brand span { margin-left: .5rem; font-family: system-ui, sans-serif; font-size: .85rem; font-weight: 400; color: #d6c8ae; }
+.header ul { list-style: none; display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin: 0; padding: 0; }
+.header a { color: var(--kertas); text-decoration: none; font-weight: 500; padding: .3rem 0; display: inline-block; border-bottom: 2px solid transparent; }
+.header a:hover { color: #d6c8ae; border-bottom-color: #d6c8ae; }
+.judul-utama { font-size: 2rem; margin: 2rem 0 .5rem; }
+.section { padding: 2rem 0; border-bottom: 1px solid var(--garis); }
+.kartu { background: var(--kartu); border: 1px solid var(--garis); border-radius: 8px; padding: 1.1rem; }
+.profil { display: flex; gap: 1.25rem; align-items: flex-start; }
+.avatar { flex: none; width: 84px; height: 84px; display: grid; place-items: center; border-radius: 50%; background: var(--hijau); color: var(--kertas); font-family: Georgia, serif; font-size: 1.8rem; font-weight: 700; }
+dl { margin: 0; }
+dl > div { display: flex; gap: .75rem; padding: .15rem 0; }
+dt { min-width: 8.5rem; color: var(--redup); }
+dd { margin: 0; font-weight: 500; }
+.kontrol { display: grid; gap: 1rem; margin-bottom: 1rem; }
+.field { margin-bottom: 1rem; }
+.kontrol .field { margin: 0; }
+label { display: block; font-weight: 500; margin-bottom: .3rem; }
+input, textarea { width: 100%; min-height: 44px; padding: .5rem .75rem; font: inherit; color: var(--teks); background: #fff; border: 1.5px solid var(--garis); border-radius: 6px; }
+.filter, .aksi { display: flex; flex-wrap: wrap; gap: .5rem; }
+.btn { min-height: 44px; padding: .4rem 1.1rem; font: inherit; font-weight: 600; border-radius: 6px; cursor: pointer; border: 1.5px solid var(--hijau); }
+.btn-utama { background: var(--hijau); color: var(--kertas); }
+.btn-garis { background: transparent; color: var(--hijau); }
+.btn-bahaya { background: transparent; color: #8a1f17; border-color: #8a1f17; }
+.btn:hover { opacity: .85; }
+.info { color: var(--redup); font-size: .9rem; margin: 0 0 .75rem; }
+.grid { list-style: none; margin: 0 0 1.25rem; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+.matkul p, .teknologi { margin: 0 0 .6rem; color: var(--redup); font-size: .95rem; }
+.lencana { display: inline-block; padding: .15rem .7rem; border-radius: 999px; background: #dcebd9; color: #1f5130; font-size: .85rem; font-weight: 600; }
+.proyek { display: flex; flex-direction: column; }
+.proyek .aksi { margin-top: auto; }
+.detail { margin-bottom: .8rem; }
+.detail p { margin: 0 0 .4rem; }
+.kosong { padding: 1.25rem; text-align: center; color: var(--redup); border: 1.5px dashed var(--garis); border-radius: 8px; }
+.galat { color: #8a1f17; font-weight: 500; margin: 0 0 1rem; }
+.daftar { padding-left: 1.2rem; }
+.footer { padding: 1.5rem 1rem; text-align: center; font-size: .85rem; color: var(--redup); }
+@media (min-width: 640px) { .kontrol { grid-template-columns: 1fr auto; align-items: end; } }
+@media (max-width: 560px) { .profil { flex-direction: column; } dl > div { flex-direction: column; gap: 0; padding: .3rem 0; } }
